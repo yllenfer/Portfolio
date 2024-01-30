@@ -19,6 +19,9 @@ body, html{
 h1{
   font-family: 'Honk', system-ui;
   font-size: 60px;
+  text-align: center;
+  position: relative;
+
 }
 
 .nav-all-things {
@@ -56,7 +59,7 @@ nav a:link{
   width: 50px;
 }
 
-.social, .footer-p, img {
+.social, .footer-p, img{
   background-color: aquamarine;
   margin-top: 10px;
   height: 60px;
