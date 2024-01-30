@@ -1,0 +1,1 @@
+import{l as e}from"./utils-ee8585d4.js";e();document.getElementById("hamburger").addEventListener("click",function(){this.classList.toggle("active"),document.getElementById("nav-links").classList.toggle("open")});
