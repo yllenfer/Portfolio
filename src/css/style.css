@@ -24,6 +24,27 @@ h1{
 
 }
 
+h2 {
+  position: absolute;
+  margin-top: 7%;
+  margin-left: 4%;
+  font-family: 'Honk', system-ui;
+  font-family: 'Single Day', cursive;
+  font-size: 25px;
+
+}
+
+.photo {
+  width: 20%;
+  height: auto;
+  background-color: aquamarine;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 5%;
+  margin-top: 10%;
+
+}
+
 .nav-all-things {
    background-color: aquamarine;
 }
@@ -39,7 +60,7 @@ nav a:link{
 .nav-links{
   display: flex;
   justify-content: flex-end;
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
 }
@@ -49,7 +70,7 @@ nav a:link{
 }
 
 .logo-name {
-  position: fixed;
+  position: absolute;
   padding: 10px;
 }
 
@@ -70,10 +91,11 @@ nav a:link{
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  /* bottom: 0; */
   font-family: 'Single Day', cursive; 
   font-size: 25px;
   background-color: aquamarine;
+  margin-top: 10%;
 
 }
 
