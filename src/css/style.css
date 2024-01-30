@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Single+Day&display=swap');
+
+
+* {
+  background-color: #FFF;
+  margin: 0%;
+}
+
+body, html{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1{
+  font-family: 'Honk', system-ui;
+  font-size: 60px;
+}
+
+.nav-all-things {
+   background-color: aquamarine;
+}
+
+nav a:link{
+  text-decoration: none;
+  font-family: 'Honk', system-ui;
+  font-family: 'Single Day', cursive;
+  font-size: 25px;
+  color: black;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.nav-links a {
+  padding: 10px;
+}
+
+.logo-name {
+  position: fixed;
+  padding: 10px;
+}
+
+
+/* Footer */
+.social img {
+  width: 50px;
+}
+
+.social, .footer-p, img {
+  background-color: aquamarine;
+  margin-top: 10px;
+  height: 60px;
+}
+
+.all-footer-section {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: 'Single Day', cursive; 
+  font-size: 25px;
+  background-color: aquamarine;
+
+}
+
+.social a {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0; 
+  background-color: aquamarine;
+}
+
+
+/* .footer-p {
+  margin: 0; 
+} */
