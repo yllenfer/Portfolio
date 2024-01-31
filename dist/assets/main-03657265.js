@@ -1,0 +1,1 @@
+import{l as n}from"./utils-2247995b.js";async function a(){await n(),i()}function i(){const e=document.getElementById("hamburger-menu"),t=document.getElementById("nav-links");e.addEventListener("click",()=>{e.classList.toggle("active"),t.classList.toggle("open")})}a();

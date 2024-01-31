@@ -53,3 +53,34 @@ export async function renderWithTemplate(
   }
   
   
+// Resets the menu to its default state
+export function resetMenuState() {
+    const hamburger = document.getElementById('hamburger-menu');
+    const closeIcon = document.getElementById('close-icon');
+    const navLinks = document.getElementById('nav-links');
+
+    // Hide the navigation links and the 'X' icon, show the hamburger icon
+    navLinks.classList.remove('open');
+    hamburger.style.display = 'block';
+    closeIcon.style.display = 'none';
+}
+
+export function setupHamburgerMenu() {
+    const hamburger = document.getElementById('hamburger-menu');
+    const closeIcon = document.getElementById('close-icon');
+    const navLinks = document.getElementById('nav-links');
+
+    // Event listener for opening the menu
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.add('open');
+        hamburger.style.display = 'none';
+        closeIcon.style.display = 'block';
+    });
+
+    // Event listener for closing the menu
+    closeIcon.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburger.style.display = 'block';
+        closeIcon.style.display = 'none';
+    });
+}

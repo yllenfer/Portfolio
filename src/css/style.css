@@ -14,6 +14,8 @@ body, html{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* opacity: 0;
+  transition: opacity 0.3s; */
 }
 
 h1{
@@ -21,12 +23,13 @@ h1{
   font-size: 60px;
   text-align: center;
   position: relative;
+  margin-top: 5%;
 
 }
 
 h2 {
   position: absolute;
-  margin-top: 7%;
+  margin-top: 10%;
   margin-left: 4%;
   font-family: 'Honk', system-ui;
   font-family: 'Single Day', cursive;
@@ -41,13 +44,11 @@ h2 {
   border-radius: 50%;
   position: absolute;
   margin-left: 5%;
-  margin-top: 10%;
+  margin-top: 15%;
 
 }
 
-/* .nav-all-things {
-   background-color: aquamarine;
-} */
+
 
 nav a:link{
   text-decoration: none;
@@ -109,16 +110,66 @@ nav a:link{
 
 .nav-all-things .icon {
   display: none;
-  /* Additional styling for the icon */
+
 }
+
+.skills {
+  display: flex; /* Align children in a row */
+  justify-content: flex-start; /* Align children to the start of the container */
+  align-items: center; /* Center children vertically */
+  margin-top: 30%; /* Adjust as needed */
+  margin-left: 5%;
+}
+
+.skills img {
+  background: none;
+  margin-left: 20px; /* Space between images */
+  width: 5%; /* Adjust as needed */
+  height: auto; /* Adjust as needed */
+ 
+}
+
+
+
+/* Loader */
+
+#loading-div {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100; 
+}
+
+.loader {
+  border: 5px solid #f3f3f3; 
+  border-top: 5px solid #3498db; 
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 
 
 
 /* Mobile */
 @media only screen and (max-width: 768px) {
- *{
-  background-color: bisque;
- }
+
+  h1 {
+    margin-top: 10%;
+  }
+
 
  h2{
   margin-top: 2%;
@@ -126,70 +177,72 @@ nav a:link{
   position: relative;
  }
 
-
-
  .photo{
   margin-top: 10%;
   margin-left: 15%;
   position: relative;
   width: 70%;
  }
-
- h1{
-  margin-top: 10%;
-  position: relative;
- }
-
-
- @media only screen and (max-width: 768px) {
   .nav-all-things {
     position: relative; 
   }
 
   .hamburger-menu {
-    display: block; /* Show hamburger */
-    position: fixed; /* Fixed position to stay in place */
-    right: 10px; /* Position from the right */
-    top: 10px; /* Position from the top */
-    z-index: 2; /* Higher than the nav links to stay on top */
+    display: block; 
+    position: absolute;
+    right: 10px; 
+    top: 10px; 
     cursor: pointer;
+    z-index: 1; 
+  }
+
+  .hamburger-menu.active {
+    display: none; 
   }
 
   .nav-links {
-    display: none; /* Hide links initially */
-    flex-direction: column; /* Stack links vertically */
-    position: fixed; /* Fixed position to cover the screen when visible */
-    right: -100%; /* Start off-screen */
+    display: none; 
+    flex-direction: column; 
+    position: fixed; 
+    right: -100%; 
     top: 0;
-    height: 100vh; /* Full viewport height */
-    width: 80%; /* Width of the sidebar */
-    background-color: #fff; /* Background color */
-    transition: right 0.3s; /* Smooth slide-in transition */
-    z-index: 1; /* Below the hamburger icon */
-    background-color: #FFF;
+    height: 100vh; 
+    width: 80%; 
+    transition: right 0.3s; 
+    z-index: 1; 
+    background-color: aqua;
+    
   }
 
   .nav-links.open {
-    display: flex; /* Flex display to enable vertical stack */
-    right: 0; /* Bring into view */
-    background-color: #FFF;
+    display: flex; 
+    right: 0; 
   }
 
   .nav-links a {
-    padding: 15px 20px; /* Padding for links */
-    font-size: 18px; /* Link font size */
-    color: black; /* Link text color */
-    border-bottom: 1px solid #ddd; 
-    background: #fff; 
+    padding: 15px 20px; 
+    font-size: 18px; 
+    color: black; 
+    background: aqua; 
   }
 
-  /* Transform hamburger into 'X' when active */
-  .hamburger-menu.active:before {
-    content: '\00d7'; 
-    font-size: 30px; 
-    color: #333; 
-    background-color: #FFF;
+  .close-icon {
+    display: block; 
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 2; 
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
   }
- 
- }
+
+  .skills img{
+    width: 20%;
+    display: block;
+    align-items: center;
+    margin-left: 10%;
+    margin-top: -100px;
+    
+  }
 }
