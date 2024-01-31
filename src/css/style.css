@@ -141,23 +141,55 @@ nav a:link{
  }
 
 
- .nav-all-things .icon {
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  /* More styling as needed */
-}
+ @media only screen and (max-width: 768px) {
+  .nav-all-things {
+    position: relative; 
+  }
 
-.nav-links {
-  display: none;
-  position: fixed;
-  right: -100%; /* Start off the screen */
-  transition: right 0.3s;
-  /* Additional styling for the sliding menu */
-}
+  .hamburger-menu {
+    display: block; /* Show hamburger */
+    position: fixed; /* Fixed position to stay in place */
+    right: 10px; /* Position from the right */
+    top: 10px; /* Position from the top */
+    z-index: 2; /* Higher than the nav links to stay on top */
+    cursor: pointer;
+  }
 
-.nav-links.open {
-  right: 0; /* Slide in from the right */
-}
+  .nav-links {
+    display: none; /* Hide links initially */
+    flex-direction: column; /* Stack links vertically */
+    position: fixed; /* Fixed position to cover the screen when visible */
+    right: -100%; /* Start off-screen */
+    top: 0;
+    height: 100vh; /* Full viewport height */
+    width: 80%; /* Width of the sidebar */
+    background-color: #fff; /* Background color */
+    transition: right 0.3s; /* Smooth slide-in transition */
+    z-index: 1; /* Below the hamburger icon */
+    background-color: #FFF;
+  }
+
+  .nav-links.open {
+    display: flex; /* Flex display to enable vertical stack */
+    right: 0; /* Bring into view */
+    background-color: #FFF;
+  }
+
+  .nav-links a {
+    padding: 15px 20px; /* Padding for links */
+    font-size: 18px; /* Link font size */
+    color: black; /* Link text color */
+    border-bottom: 1px solid #ddd; 
+    background: #fff; 
+  }
+
+  /* Transform hamburger into 'X' when active */
+  .hamburger-menu.active:before {
+    content: '\00d7'; 
+    font-size: 30px; 
+    color: #333; 
+    background-color: #FFF;
+  }
+ 
+ }
 }
