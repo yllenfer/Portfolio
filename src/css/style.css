@@ -30,7 +30,7 @@ h1{
 h2 {
   position: absolute;
   margin-top: 12%;
-  margin-left: 4%;
+  margin-left: 8%;
   font-family: 'Honk', system-ui;
   font-family: 'Single Day', cursive;
   font-size: 25px;
@@ -59,7 +59,8 @@ h2 {
   width: 20%;
   height: auto;
   border-radius: 50%;
-  margin-right: 5%; 
+  margin-left: 10%; 
+  margin-top: 2%;
 }
 
 .project-grid {
@@ -126,7 +127,7 @@ nav a:link{
   font-family: 'Single Day', cursive; 
   font-size: 25px;
   background-color: aquamarine;
-  margin-top: 10%;
+  margin-top: 5%;
 
 }
 
@@ -144,10 +145,11 @@ nav a:link{
 }
 
 .projects h2{
-  background: none;
-  margin-left: 70%;
-  margin-top: -10px;
+  font-family: 'Honk', system-ui;
+  font-size: 60px;
+  text-align: center;
   position: relative;
+  margin-top: 5%;
 }
 
 .skills img{
@@ -294,7 +296,10 @@ nav a:link{
 }
 
 .project-grid{
-  display: none;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); 
+  margin-right: 50px;
+
 }
   
 }
