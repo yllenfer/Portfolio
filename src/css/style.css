@@ -107,6 +107,12 @@ nav a:link{
 }
 
 
+.nav-all-things .icon {
+  display: none;
+  /* Additional styling for the icon */
+}
+
+
 
 /* Mobile */
 @media only screen and (max-width: 768px) {
@@ -135,4 +141,23 @@ nav a:link{
  }
 
 
+ .nav-all-things .icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  /* More styling as needed */
+}
+
+.nav-links {
+  display: none;
+  position: fixed;
+  right: -100%; /* Start off the screen */
+  transition: right 0.3s;
+  /* Additional styling for the sliding menu */
+}
+
+.nav-links.open {
+  right: 0; /* Slide in from the right */
+}
 }

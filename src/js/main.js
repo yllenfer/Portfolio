@@ -1,8 +1,22 @@
 import { loadHeaderFooter } from "./utils.mjs";
 
-loadHeaderFooter();
+async function initialize() {
+    await loadHeaderFooter();
+    // other initialization code
+}
 
-document.getElementById('hamburger').addEventListener('click', function() {
-    this.classList.toggle('active');
-    document.getElementById('nav-links').classList.toggle('open');
-});
+function toggleMenu() {
+  var x = document.getElementById("nav-links");
+  if (x.classList.contains('open')) {
+    x.classList.remove('open');
+  } else {
+    x.classList.add('open');
+  }
+}
+
+window.toggleMenu = toggleMenu; // Make it globally accessible
+
+console.log(document.getElementById("nav-links"));
+
+
+initialize();
