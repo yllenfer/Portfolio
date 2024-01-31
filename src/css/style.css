@@ -29,7 +29,7 @@ h1{
 
 h2 {
   position: absolute;
-  margin-top: 10%;
+  margin-top: 12%;
   margin-left: 4%;
   font-family: 'Honk', system-ui;
   font-family: 'Single Day', cursive;
@@ -37,7 +37,7 @@ h2 {
 
 }
 
-.photo {
+/* .photo {
   width: 20%;
   height: auto;
   background-color: aquamarine;
@@ -46,8 +46,38 @@ h2 {
   margin-left: 5%;
   margin-top: 15%;
 
+} */
+
+.content {
+  display: flex;
+  justify-content: center; /* Center the content */
+  align-items: center; /* Align items vertically */
+  margin-top: 5%;
 }
 
+.photo {
+  width: 20%;
+  height: auto;
+  border-radius: 50%;
+  margin-right: 5%; 
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 20px; 
+  width: 40%;
+  background: none;
+  margin-left: 5%;
+
+}
+
+.project-grid img {
+  width: 100%; 
+  height: auto; 
+  background: none;
+  margin-top: 20px;
+}
 
 
 nav a:link{
@@ -113,22 +143,19 @@ nav a:link{
 
 }
 
-.skills {
-  display: flex; /* Align children in a row */
-  justify-content: flex-start; /* Align children to the start of the container */
-  align-items: center; /* Center children vertically */
-  margin-top: 30%; /* Adjust as needed */
-  margin-left: 5%;
-}
-
-.skills img {
+.projects h2{
   background: none;
-  margin-left: 20px; /* Space between images */
-  width: 5%; /* Adjust as needed */
-  height: auto; /* Adjust as needed */
- 
+  margin-left: 70%;
+  margin-top: -10px;
+  position: relative;
 }
 
+.skills img{
+  background: none;
+  position: relative;
+  margin-top: 5%;
+  margin-left: 10%;
+}
 
 
 /* Loader */
@@ -155,10 +182,13 @@ nav a:link{
   animation: spin 2s linear infinite;
 }
 
+
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+
 
 
 
@@ -191,32 +221,36 @@ nav a:link{
     display: block; 
     position: absolute;
     right: 10px; 
-    top: 10px; 
+    top: 0; 
     cursor: pointer;
     z-index: 1; 
+    font-size: 45px;
+   
   }
 
   .hamburger-menu.active {
-    display: none; 
+    display: none;
+    background-color: black;
+ 
   }
 
   .nav-links {
     display: none; 
     flex-direction: column; 
     position: fixed; 
-    right: -100%; 
-    top: 0;
-    height: 100vh; 
-    width: 80%; 
-    transition: right 0.3s; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    width: 100%; 
+    transition: top 0.3s; 
     z-index: 1; 
-    background-color: aqua;
-    
+    background-color: aqua; 
   }
 
   .nav-links.open {
     display: flex; 
-    right: 0; 
+    top: 0px; 
+    
   }
 
   .nav-links a {
@@ -224,25 +258,43 @@ nav a:link{
     font-size: 18px; 
     color: black; 
     background: aqua; 
+    text-align: center; 
   }
-
   .close-icon {
     display: block; 
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 0;
     z-index: 2; 
     font-size: 30px;
     cursor: pointer;
     background: none;
+    font-size: 45px;
   }
 
-  .skills img{
-    width: 20%;
-    display: block;
-    align-items: center;
-    margin-left: 10%;
-    margin-top: -100px;
+  .skills {
+    display: flex;
+    overflow: hidden;
+    width: 70%; 
+    margin-left: 15%; 
+    margin-top: 10%; 
+   
+  }
+  
+  .skills img {
+    width: calc(30% - 20px); 
+    margin: 0 12px; 
+    transition: transform 0.5s ease-in-out; 
+    background: none;
     
   }
+
+  .projects h2{
+  display: none;  
+}
+
+.project-grid{
+  display: none;
+}
+  
 }

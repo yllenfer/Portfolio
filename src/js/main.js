@@ -14,3 +14,22 @@ window.addEventListener('load', function() {
     loadingDiv.style.display = 'none';
   });
   
+
+  function rotateImages() {
+    const skillsDiv = document.querySelector('.skills');
+    const firstImage = skillsDiv.querySelector('img:first-child');
+    skillsDiv.appendChild(firstImage.cloneNode(true)); // Clone and append to the end
+    firstImage.remove(); // Remove the original first image
+  
+    // Apply the transformation, accounting for margin
+    const images = skillsDiv.querySelectorAll('img');
+    const imageWidthWithMargin = firstImage.offsetWidth + 20; // 20px is the total margin
+    images.forEach((img, index) => {
+      img.style.transform = `translateX(-${imageWidthWithMargin * index}px)`;
+    });
+  }
+  
+  // Rotate images every 3 seconds (3000 milliseconds)
+  setInterval(rotateImages, 3000);
+  
+  
