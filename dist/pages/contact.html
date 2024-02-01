@@ -7,9 +7,9 @@
     <link rel="icon" type="image/x-icon" href="/images/me.png">
     
     <title>Yllen Fernandez | Contact</title>
-  <script type="module" crossorigin src="/assets/contact-ec1a1585.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/utils-f950e77d.js">
-  <link rel="stylesheet" href="/assets/utils-89920260.css">
+  <script type="module" crossorigin src="/assets/contact-e279cfbf.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/utils-7678577f.js">
+  <link rel="stylesheet" href="/assets/utils-d93e609a.css">
 </head>
 <body>
     <header class="divider" id="main-header"></header>
@@ -19,7 +19,11 @@
       </div> 
       
       <div class="contact-container">
-        <form action="http://localhost:3000/send-email" method="post">
+        <form id="contact-form" method="post">
+          <div id="message" style="display: none;">
+            &#10004;
+            Email successfully sent!
+          </div>
           <label for="fname">Name</label>
           <input type="text" id="fname" name="firstname" placeholder="Your name">
           <label for="fname">Email</label>
@@ -29,6 +33,7 @@
           <div class="submit-container">
           <input type="submit" value="Submit">
           </div>
+         
           </form>
       </div>
     <footer id="main-footer"> </footer>
