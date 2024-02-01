@@ -358,16 +358,13 @@ input[type=submit]:hover {
 
 }
 
-.photo{
-  margin-bottom: 20%;
-}
 
 .all-footer-section{
   margin-top: 10%;
 }
 
 .contact-container{
-  margin-bottom: -30%;
+  /* margin-bottom: -50%; */
   margin-top: -22%;
 }
 
