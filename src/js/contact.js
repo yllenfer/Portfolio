@@ -18,7 +18,7 @@ window.addEventListener('load', function() {
     event.preventDefault();
 
     const formData = new FormData(this);
-    fetch('pages/contact.html', { 
+    fetch('contact.html', { 
         method: 'POST',
         body: formData
     })
