@@ -18,7 +18,7 @@ window.addEventListener('load', function() {
     event.preventDefault();
 
     const formData = new FormData(this);
-    fetch('contact.html', { 
+    fetch('/.netlify/functions/contact-form', { 
         method: 'POST',
         body: formData
     })
