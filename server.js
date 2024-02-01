@@ -1,7 +1,6 @@
 require('dotenv').config();
 require('dotenv').config();
-console.log(process.env.EMAIL_USER);
-console.log(process.env.EMAIL_PASSWORD);
+
 
 const express = require('express');
 const nodemailer = require('nodemailer');
@@ -31,15 +30,15 @@ app.post('/send-email', async (req, res) => {
         text: `You have a new submission from: Name: ${firstname}, Email: ${email}, Message: ${subject}`, // plain text body
     };
 
-    // Send mail with defined transport object
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            return console.log(error);
-            res.status(500).send("Error while sending email.");
+            console.log(error);
+            return res.status(500).send("Error while sending email.");
         }
         console.log('Message sent: %s', info.messageId);
         res.status(200).send("Email successfully sent!");
     });
+    
 });
 
 const PORT = 3000;
