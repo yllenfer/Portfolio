@@ -18,7 +18,7 @@ window.addEventListener('load', function() {
     event.preventDefault();
 
     const formData = new FormData(this);
-    fetch('https://yllenfernandez.com/pages/contact', { 
+    fetch('contact', { 
         method: 'POST',
         body: formData
     })
