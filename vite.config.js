@@ -1,8 +1,13 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
 
+// export default {
+//   base: process.env.BASE_URL || '/',
+// }
+
 
 export default defineConfig({
+    base: process.env.BASE_URL || '/',
     root: "src/",
     build: {
       outDir: "../dist",
