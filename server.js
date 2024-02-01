@@ -8,25 +8,24 @@ const nodemailer = require('nodemailer');
 
 const app = express();
 app.use(express.json());
-app.use(express.urlencoded({ extended: true })); // to support URL-encoded bodies
+app.use(express.urlencoded({ extended: true })); 
 
 app.post('/send-email', async (req, res) => {
     const { firstname, email, subject } = req.body;
 
-    // Create a transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
             user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASSWORD // Your Gmail password or App Password
+            pass: process.env.EMAIL_PASSWORD 
         }
     });
 
-    // Setup email data
+    
     let mailOptions = {
-        from: 'your-gmail@gmail.com', // sender address
-        to: 'yllenfernandez@gmail.com', // list of receivers
-        subject: `New Contact Form Submission from ${firstname}`, // Subject line
+        from: 'your-gmail@gmail.com', 
+        to: 'yllenfernandez@gmail.com', 
+        subject: `New Contact Form Submission from ${firstname}`, 
         text: `You have a new submission from: Name: ${firstname}, Email: ${email}, Message: ${subject}`, // plain text body
     };
 

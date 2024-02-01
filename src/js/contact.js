@@ -18,22 +18,22 @@ window.addEventListener('load', function() {
     event.preventDefault();
 
     const formData = new FormData(this);
-    fetch('/send-email', {
+    fetch('src/pages/contact.html', { // Adjust this URL for production
         method: 'POST',
         body: formData
     })
     .then(response => response.text())
     .then(data => {
         console.log(data);
-        // Clear the form
-        document.getElementById('contact-form').reset();
-        // Show success message
+      
+        this.reset();
+      
         const messageDiv = document.getElementById('message');
         messageDiv.style.display = 'block';
-        // Hide the message after a few seconds
+        
         setTimeout(() => {
             messageDiv.style.display = 'none';
-        }, 3000); // Adjust the time as needed
+        }, 3000); 
     })
     .catch(error => console.error('Error:', error));
 });
