@@ -18,8 +18,8 @@ window.addEventListener('load', function() {
   function rotateImages() {
     const skillsDiv = document.querySelector('.skills');
     const firstImage = skillsDiv.querySelector('img:first-child');
-    skillsDiv.appendChild(firstImage.cloneNode(true)); // Clone and append to the end
-    firstImage.remove(); // Remove the original first image
+    skillsDiv.appendChild(firstImage.cloneNode(true)); 
+    firstImage.remove(); 
   
     // Apply the transformation, accounting for margin
     const images = skillsDiv.querySelectorAll('img');

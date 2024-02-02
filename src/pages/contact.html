@@ -14,13 +14,13 @@
     <div id="loading-div">
         <div class="loader"></div>
       </div> 
-      
       <div class="contact-container">
         <div id="message" style="display: none;">Email successfully sent!</div>
+        <div id="validation-error" class="hidden">Please fill all the fields</div>
         <form id="contact-form" method="post">
           <label for="fname">Name</label>
           <input type="text" id="fname" name="firstname" placeholder="Your name">
-          <label for="fname">Email</label>
+          <label for="email">Email</label>
           <input type="text" id="email" name="email" placeholder="Your email">
           <label for="subject">Subject</label>
           <textarea id="subject" name="subject" placeholder="Write something" style="height:100px"></textarea>

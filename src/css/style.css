@@ -28,6 +28,20 @@ body, html{
   background-color: #DFF2BF;
 }
 
+#validation-error {
+  background-color: #FFBABA;
+  color: #270;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+  color: #D8000C;
+  background-color: #FFBABA;
+}
+
+#validation-error.hidden {
+  display: none;
+  background-color: initial; 
+}
 
 h1{
   font-family: 'Honk', system-ui;
@@ -61,8 +75,8 @@ h2 {
 
 .content {
   display: flex;
-  justify-content: center; /* Center the content */
-  align-items: center; /* Align items vertically */
+  justify-content: center;
+  align-items: center;
   margin-top: 5%;
 }
 
@@ -70,8 +84,17 @@ h2 {
   width: 20%;
   height: auto;
   border-radius: 50%;
-  margin-left: 10%; 
+  margin-left: 10%;
   margin-top: 2%;
+}
+
+.about-me {
+  margin-left: 30%; /* Adjust the margin as needed */
+  margin-top: 18%;
+  position: absolute;
+  padding: 20px;
+  font-size: 35px;
+  font-family: 'Single Day', cursive;
 }
 
 .project-grid {
@@ -166,6 +189,7 @@ input[type=submit]:hover {
 /* Footer */
 .social img {
   width: 50px;
+  margin: 10px;
 }
 
 .social, .footer-p, img{
@@ -329,12 +353,17 @@ input[type=submit]:hover {
     background: none;
     font-size: 45px;
   }
-
+.about-me{
+  font-family: 'Single Day', cursive;
+  margin-top: 8%;
+  font-size: 25px;
+  padding: 20px;
+}
   .skills {
     display: flex;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 70%; 
-    margin-left: 15%; 
+    margin-left: 2%; 
     margin-top: 10%; 
    
   }
@@ -360,7 +389,7 @@ input[type=submit]:hover {
 
 
 .all-footer-section{
-  margin-top: 10%;
+  margin-top: 20%;
 }
 
 .contact-container{
