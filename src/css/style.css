@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Honk&family=Single+Day&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
 
 
 * {
-  background-color: #FFF;
+  background-color: #f8edeb;
   margin: 0%;
 }
 
@@ -43,7 +44,7 @@ body, html{
 }
 
 h1{
-  font-family: 'Honk', system-ui;
+  font-family: 'Mulish', sans-serif;
   font-size: 60px;
   text-align: center;
   position: relative;
@@ -55,8 +56,7 @@ h2 {
   position: absolute;
   margin-top: 12%;
   margin-left: 8%;
-  font-family: 'Honk', system-ui;
-  font-family: 'Single Day', cursive;
+  font-family: 'Mulish', sans-serif;
   font-size: 25px;
 
 }
@@ -83,7 +83,7 @@ h2 {
   position: absolute;
   padding: 20px;
   font-size: 30px;
-  font-family: 'Single Day', cursive;
+  font-family: 'Mulish', sans-serif;
   max-width: 800px;
 }
 
@@ -107,8 +107,7 @@ h2 {
 
 nav a:link{
   text-decoration: none;
-  font-family: 'Honk', system-ui;
-  font-family: 'Single Day', cursive;
+  font-family: 'Mulish', sans-serif;
   font-size: 25px;
   color: black;
 }
@@ -132,11 +131,12 @@ nav a:link{
 
 
 input[type=text], select, textarea {
-  font-family: 'Single Day', cursive; 
+  font-family: 'Mulish', sans-serif;
   width: 100%; 
   font-size: 15px;
   padding: 12px; 
-  border: 1px solid #ccc; 
+  border: 1px solid #fff; 
+  background-color: #FFF;
   border-radius: 4px; 
   box-sizing: border-box; 
   margin-top: 6px; 
@@ -146,13 +146,13 @@ input[type=text], select, textarea {
 }
 
 input[type=submit] {
-  background-color: aquamarine;
+  background-color: #ffb5a7;
   color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-family: 'Single Day', cursive; 
+  font-family: 'Mulish', sans-serif;
   font-size: 20px;
 }
 
@@ -164,7 +164,7 @@ input[type=submit] {
 
 
 input[type=submit]:hover {
-  background-color: rgb(88, 176, 146);
+  background-color: #fec89a;
 }
 
 
@@ -172,7 +172,7 @@ input[type=submit]:hover {
   border-radius: 5px;
   font-size: 18px;
   padding: 20px;
-  font-family: 'Single Day', cursive; 
+  font-family: 'Mulish', sans-serif;
 }
 
 /* Footer */
@@ -182,7 +182,7 @@ input[type=submit]:hover {
 }
 
 .social, .footer-p, img{
-  background-color: aquamarine;
+  background-color: #ffb5a7;
   margin-top: 10px;
   height: 60px;
 }
@@ -193,9 +193,9 @@ input[type=submit]:hover {
   left: 0;
   right: 0;
   /* bottom: 0; */
-  font-family: 'Single Day', cursive; 
+  font-family: 'Mulish', sans-serif;
   font-size: 25px;
-  background-color: aquamarine;
+  background-color: #ffb5a7;
   margin-top: 5%;
 
 }
@@ -204,7 +204,7 @@ input[type=submit]:hover {
   text-decoration: none;
   display: inline-block;
   font-size: 0; 
-  background-color: aquamarine;
+  background-color: #ffb5a7;
 }
 
 
@@ -214,7 +214,7 @@ input[type=submit]:hover {
 }
 
 .projects h2{
-  font-family: 'Honk', system-ui;
+  font-family: 'Mulish', sans-serif;
   font-size: 60px;
   text-align: center;
   position: relative;
@@ -315,7 +315,7 @@ input[type=submit]:hover {
     width: 100%; 
     transition: top 0.3s; 
     z-index: 1; 
-    background-color: aqua; 
+    background-color: #fff; 
   }
 
   .nav-links.open {
@@ -328,7 +328,7 @@ input[type=submit]:hover {
     padding: 15px 20px; 
     font-size: 18px; 
     color: black; 
-    background: aqua; 
+    background: #fff; 
     text-align: center; 
   }
   .close-icon {
@@ -343,7 +343,7 @@ input[type=submit]:hover {
     font-size: 45px;
   }
 .about-me{
-  font-family: 'Single Day', cursive;
+  font-family: 'Mulish', sans-serif;
   margin-top: 8%;
   font-size: 25px;
   padding: 20px;
@@ -390,4 +390,94 @@ input[type=submit]:hover {
 #contact-form{
   margin-top: 15%;
 }
+}
+
+
+@media only screen and (min-width: 786px) and (max-height: 393px) and (orientation: landscape) {
+  * {
+    background-color: #f8edeb;
+    margin: 0%;
+  }
+
+  h2{
+    margin-top: 20%;
+    margin-left: 4%;
+    
+  }
+
+  .photo{
+    margin-top: 15%;
+  }
+
+  .skills {
+    display: flex;
+    /* overflow: hidden; */
+    width: 60%; 
+     margin-left: 2%; 
+    margin-top: 30%; 
+    margin-left: 25%; 
+    
+   
+  }
+  
+  .skills img {
+    width: calc(30% - 20px); 
+    margin: 0 12px; 
+    transition: transform 0.5s ease-in-out; 
+    background: none;
+    
+  }
+
+  .all-footer-section{
+    margin-top: 10%;
+  }
+
+  .about-me {
+    margin-top: 25%;
+  }
+}
+
+
+@media only screen and (min-width: 896px) and (max-height: 414px) and (orientation: landscape) {
+  * {
+    background-color: #f8edeb;
+    margin: 0%;
+  }
+
+  h2{
+    margin-top: 22%;
+    margin-left: 4%;
+    
+  }
+
+  .photo{
+    margin-top: 15%;
+  }
+
+  .skills {
+    display: flex;
+    /* overflow: hidden; */
+    width: 60%; 
+     margin-left: 2%; 
+    margin-top: 30%; 
+    margin-left: 25%; 
+    
+   
+  }
+  
+  .skills img {
+    width: calc(30% - 20px); 
+    margin: 0 12px; 
+    transition: transform 0.5s ease-in-out; 
+    background: none;
+    
+  }
+
+  .all-footer-section{
+    margin-top: 10%;
+  }
+
+  .about-me {
+    margin-top: 25%;
+  }
 }
