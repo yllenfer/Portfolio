@@ -17,8 +17,10 @@ window.addEventListener('load', function() {
   document.getElementById('contact-form').addEventListener('submit', function (event) {
     event.preventDefault();
     const formData = new FormData(this);
+    const apiUrl = '/.netlify/functions/send-email';
+    console.log('this is the api',apiUrl);
 
-    fetch('/.netlify/functions/send-email', {
+    fetch(apiUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
