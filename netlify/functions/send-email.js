@@ -9,9 +9,10 @@ exports.handler = async (event, context) => {
             service: 'gmail',
             auth: {
                 user: process.env.EMAIL_USER,
-                pass: process.env.EMAIL_PASSWORD
+                pass: process.env.EMAIL_PASSWORD, // Use App Password here
             }
         });
+        
 
         let mailOptions = {
             from: 'your-gmail@gmail.com',
