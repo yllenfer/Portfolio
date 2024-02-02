@@ -14,8 +14,7 @@ body, html{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* opacity: 0;
-  transition: opacity 0.3s; */
+  
 }
 
 #message {
@@ -62,16 +61,6 @@ h2 {
 
 }
 
-/* .photo {
-  width: 20%;
-  height: auto;
-  background-color: aquamarine;
-  border-radius: 50%;
-  position: absolute;
-  margin-left: 5%;
-  margin-top: 15%;
-
-} */
 
 .content {
   display: flex;
@@ -89,12 +78,13 @@ h2 {
 }
 
 .about-me {
-  margin-left: 30%; /* Adjust the margin as needed */
+  margin-left: 30%; 
   margin-top: 18%;
   position: absolute;
   padding: 20px;
-  font-size: 35px;
+  font-size: 30px;
   font-family: 'Single Day', cursive;
+  max-width: 800px;
 }
 
 .project-grid {
@@ -140,19 +130,18 @@ nav a:link{
   padding: 10px;
 }
 
-/* Contact form */
-/* Style inputs with type="text", select elements and textareas */
+
 input[type=text], select, textarea {
   font-family: 'Single Day', cursive; 
-  width: 100%; /* Full width */
+  width: 100%; 
   font-size: 15px;
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  padding: 12px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical 
   
 }
 
@@ -169,16 +158,16 @@ input[type=submit] {
 
 .submit-container {
   display: flex;
-  justify-content: center; /* Center the button horizontally */
+  justify-content: center; 
  
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
+
 input[type=submit]:hover {
   background-color: rgb(88, 176, 146);
 }
 
-/* Add a background color and some padding around the form */
+
 .contact-container {
   border-radius: 5px;
   font-size: 18px;
@@ -279,7 +268,7 @@ input[type=submit]:hover {
 @media only screen and (max-width: 768px) {
 
   h1 {
-    margin-top: 10%;
+    margin-top: 20%;
   }
 
 
@@ -358,6 +347,8 @@ input[type=submit]:hover {
   margin-top: 8%;
   font-size: 25px;
   padding: 20px;
+  position: relative;
+  margin-left: 20px;
 }
   .skills {
     display: flex;
