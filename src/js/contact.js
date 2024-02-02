@@ -18,7 +18,7 @@ window.addEventListener('load', function() {
     event.preventDefault();
     const formData = new FormData(this);
 
-    fetch('netlify/functions/send-email', {
+    fetch('/.netlify/functions/send-email', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
