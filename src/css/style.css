@@ -353,8 +353,8 @@ input[type=submit]:hover {
   .skills {
     display: flex;
     /* overflow: hidden; */
-    width: 70%; 
-    margin-left: 2%; 
+    width: 60%; 
+    /* margin-left: 2%;  */
     margin-top: 10%; 
    
   }
@@ -387,5 +387,7 @@ input[type=submit]:hover {
   /* margin-bottom: -50%; */
   margin-top: -22%;
 }
-
+#contact-form{
+  margin-top: 15%;
+}
 }
