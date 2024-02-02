@@ -1,3 +1,0 @@
-var i=(e,r)=>()=>(r||e((r={exports:{}}).exports,r),r.exports);var l=i(s=>{require("dotenv").config();const u=require("nodemailer");s.handler=async function(e,r){try{const{firstname:t,email:a,subject:o}=JSON.parse(e.body);let n=u.createTransport({service:"gmail",auth:{user:{}.EMAIL_USER,pass:{}.EMAIL_PASSWORD}});const c={from:{}.EMAIL_USER,to:"your@email.com",subject:o,text:`Name: ${t}
-Email: ${a}
-Subject: ${o}`};return await n.sendMail(c),{statusCode:200,body:"Email sent successfully!"}}catch(t){return console.error("Error:",t),{statusCode:500,body:JSON.stringify({error:"Internal Server Error"})}}}});export default l();

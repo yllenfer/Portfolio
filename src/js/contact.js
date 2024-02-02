@@ -16,15 +16,14 @@ window.addEventListener('load', function() {
 
   document.getElementById('contact-form').addEventListener('submit', function (event) {
     event.preventDefault();
-
     const formData = new FormData(this);
 
-    fetch('http://localhost:3000/send-email', {
+    fetch('netlify/functions/send-email', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(Object.fromEntries(formData)), // Convert FormData to JSON
+        body: JSON.stringify(Object.fromEntries(formData)),
     })
     .then(response => response.text())
     .then(data => {
@@ -37,4 +36,5 @@ window.addEventListener('load', function() {
         }, 3000);
     })
     .catch(error => console.error('Error:', error));
+    
 });
