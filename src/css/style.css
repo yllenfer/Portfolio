@@ -18,6 +18,42 @@ body, html{
   
 }
 
+/* Projects grid */
+
+h3{
+  font-family: 'Mulish', sans-serif;
+  font-size: 25px;
+  text-align: center;
+  /* position: relative; */
+  margin-top: 5%;
+
+}
+.project-git-img {
+  width: 100px;
+  background: none;
+}
+
+.project-image {
+  width: 100%;
+  height: 300px;
+  background: none;
+
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 20px; 
+  width: 80%;
+
+  background: none;
+  /* position: absolute;
+  margin-top: 20%; */
+  margin-bottom: 2%;
+
+}
+
+
 #message {
   background-color: rgb(75, 112, 18);
   color: #FFF;
@@ -63,12 +99,12 @@ h2 {
 
 
 .content {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 5%;
 }
-
 .photo {
   width: 20%;
   height: auto;
@@ -87,22 +123,7 @@ h2 {
   max-width: 800px;
 }
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  grid-gap: 20px; 
-  width: 40%;
-  background: none;
-  margin-left: 5%;
 
-}
-
-.project-grid img {
-  width: 100%; 
-  height: auto; 
-  background: none;
-  margin-top: 20px;
-}
 
 
 nav a:link{
@@ -122,6 +143,15 @@ nav a:link{
 
 .nav-links a {
   padding: 10px;
+}
+
+ a:visited {
+  color: black;
+  
+}
+
+.nav-links :hover {
+  text-decoration: underline;
 }
 
 .logo-name {
@@ -153,7 +183,8 @@ input[type=submit] {
   border-radius: 4px;
   cursor: pointer;
   font-family: 'Mulish', sans-serif;
-  font-size: 20px;
+  font-size: 25px;
+  width: 200px;
 }
 
 .submit-container {
@@ -331,6 +362,8 @@ input[type=submit]:hover {
     background: #fff; 
     text-align: center; 
   }
+
+ 
   .close-icon {
     display: block; 
     position: absolute;
