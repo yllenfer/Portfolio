@@ -513,3 +513,14 @@ input[type=submit]:hover {
     margin-top: 25%;
   }
 }
+
+/* Super big screens */
+@media only screen and (min-width: 1080px) and (max-height: 1920px) {
+
+
+  .photo{
+    margin-top: 5%;
+    margin-left: 7%;
+  }
+}
+
