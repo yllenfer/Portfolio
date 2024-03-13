@@ -404,11 +404,10 @@ input[type=submit]:hover {
   display: none;  
 }
 
-.project-grid{
+.project-grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr); 
-  margin-right: 50px;
-
+  grid-template-columns: repeat(1, 1fr);
+  margin-right: 5px;
 }
 
 
