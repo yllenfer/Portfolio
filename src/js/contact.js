@@ -1,4 +1,5 @@
 import { loadHeaderFooter, resetMenuState, setupHamburgerMenu } from "./utils.mjs";
+import { initFunEffects } from "./fun-effects.js";
 
 async function initialize() {
     await loadHeaderFooter();
@@ -11,6 +12,7 @@ initialize();
 window.addEventListener('load', function () {
     var loadingDiv = document.getElementById('loading-div');
     loadingDiv.style.display = 'none';
+    initFunEffects();
 });
 
 document.getElementById('contact-form').addEventListener('submit', function (event) {
