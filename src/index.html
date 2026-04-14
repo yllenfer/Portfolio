@@ -1,31 +1,341 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/css/style.css"/>
-    <link rel="icon" type="image/x-icon" href="images/favicon-image.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="js/main.js"></script>
-    <title>Yllen Fernandez | Home</title>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yllen Fernandez | Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon-image.png" />
 
-    <header class="divider" id="main-header"> </header>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@300;400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    <h1>About me</h1>
-    <h2>LIMS Engineer</h2>
+  <!-- Three.js via CDN (loaded before modules so THREE global is available) -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.168.0/build/three.min.js"></script>
 
-    <div id="loading-div">
-      <div class="loader"></div>
-    </div>
+  <link rel="stylesheet" href="/css/style.css" />
+  <script type="module" src="/js/main.js"></script>
+</head>
+<body>
 
-    <section class="hero-section">
-      <img class="photo" src="images/me.png" alt="Yllen Fernandez">
-      <p class="about-me">Hola! 👋 <br><br>
-        I'm a software engineer who loves creating things from scratch. Aside from coding, I enjoy gardening, watercolor painting, hiking, eating, etc, I'm currently juggling multiple projects, some of which are complete, and some others are still in progress. This website is a hub for all my work, so feel free to reach out or connect with me on any of the platforms I'm on. I'd love to chat!
-      </p>
+  <!-- Three.js full-screen canvas (fixed background) -->
+  <canvas id="garden-canvas"></canvas>
+
+  <!-- Custom cursor -->
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursor-trail"></div>
+
+  <!-- Page content (scrolls over the canvas) -->
+  <div class="page-wrapper">
+
+    <!-- ═══════════════════ NAVIGATION ═══════════════════ -->
+    <nav class="main-nav" id="main-nav">
+      <div class="nav-logo">
+        <span class="logo-flower">🌸</span>
+        <a href="#hero">Yllen Fernandez</a>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- ═══════════════════ HERO ═══════════════════ -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-greeting">Hello there! 🌱</p>
+          <h1 class="hero-name">I'm <span class="name-highlight">Yllen</span></h1>
+          <p class="hero-title">LIMS Engineer &amp; Creative Developer</p>
+          <p class="hero-subtitle">
+            I build things, grow gardens, and paint watercolors. Welcome to my little corner of the internet!
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">See My Work 🌸</a>
+            <a href="#contact" class="btn btn-secondary">Say Hello 💌</a>
+          </div>
+        </div>
+        <div class="hero-image-container">
+          <div class="hero-image-frame">
+            <img src="images/me.png" alt="Yllen Fernandez" class="hero-photo" />
+          </div>
+          <span class="float-item f1">🌸</span>
+          <span class="float-item f2">🌺</span>
+          <span class="float-item f3">🌼</span>
+          <span class="float-item f4">🦋</span>
+          <span class="float-item f5">🌿</span>
+        </div>
+      </div>
+
+      <div class="scroll-hint">
+        <span>scroll down</span>
+        <div class="scroll-arrow"></div>
+      </div>
     </section>
 
-    <footer id="main-footer"> </footer>
-  </body>
+    <!-- ═══════════════════ ABOUT ═══════════════════ -->
+    <section id="about" class="about-section">
+      <div class="section-container reveal">
+        <div class="section-header">
+          <h2 class="section-title">About Me 🌿</h2>
+          <div class="title-decoration"></div>
+        </div>
+        <div class="about-content">
+          <div class="about-card">
+            <p>
+              ¡Hola! I'm a software engineer who loves creating things from scratch. When I'm not coding, you'll find
+              me tending to my garden, painting watercolors, or exploring hiking trails.
+            </p>
+            <p>
+              I currently work as a <strong>LIMS Engineer</strong> (Laboratory Information Management Systems),
+              building software that helps scientists manage their research data. I believe good software, like a
+              good garden, takes patience, care, and a little creativity. 🌱
+            </p>
+            <div class="about-hobbies">
+              <span class="hobby-tag">🌱 Gardening</span>
+              <span class="hobby-tag">🎨 Watercolor</span>
+              <span class="hobby-tag">🥾 Hiking</span>
+              <span class="hobby-tag">💻 Coding</span>
+              <span class="hobby-tag">☕ Coffee</span>
+            </div>
+          </div>
+          <div class="about-links">
+            <a href="https://www.linkedin.com/in/yllen-fernandez-624827185/" target="_blank" rel="noopener" class="social-btn linkedin">
+              <span class="social-icon">in</span> LinkedIn
+            </a>
+            <a href="https://github.com/yllenfer" target="_blank" rel="noopener" class="social-btn github">
+              <span class="social-icon">🐙</span> GitHub
+            </a>
+            <a href="https://dev.to/opensourceyllen" target="_blank" rel="noopener" class="social-btn devto">
+              <span class="social-icon" style="font-size:0.7rem;font-weight:900;">DEV</span> Dev.to
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ SKILLS ═══════════════════ -->
+    <section id="skills" class="skills-section">
+      <div class="section-container reveal">
+        <div class="section-header">
+          <h2 class="section-title">My Skill Garden 🌷</h2>
+          <p class="section-subtitle">Each flower is a technology I've grown to love</p>
+          <div class="title-decoration"></div>
+        </div>
+        <div class="skills-garden">
+          <div class="skill-flower reveal-stagger">
+            <div class="flower-icon">🌸</div>
+            <div class="skill-name">HTML</div>
+          </div>
+          <div class="skill-flower reveal-stagger">
+            <div class="flower-icon">🌺</div>
+            <div class="skill-name">CSS</div>
+          </div>
+          <div class="skill-flower reveal-stagger">
+            <div class="flower-icon">🌼</div>
+            <div class="skill-name">JavaScript</div>
+          </div>
+          <div class="skill-flower reveal-stagger">
+            <div class="flower-icon">🌿</div>
+            <div class="skill-name">Node.js</div>
+          </div>
+          <div class="skill-flower reveal-stagger">
+            <div class="flower-icon">🍀</div>
+            <div class="skill-name">MongoDB</div>
+          </div>
+          <div class="skill-flower reveal-stagger">
+            <div class="flower-icon">🌻</div>
+            <div class="skill-name">Firebase</div>
+          </div>
+          <div class="skill-flower reveal-stagger">
+            <div class="flower-icon">🌷</div>
+            <div class="skill-name">Figma</div>
+          </div>
+          <div class="skill-flower reveal-stagger">
+            <div class="flower-icon">🧪</div>
+            <div class="skill-name">LIMS</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ PROJECTS ═══════════════════ -->
+    <section id="projects" class="projects-section">
+      <div class="section-container reveal">
+        <div class="section-header">
+          <h2 class="section-title">My Garden of Projects 🪴</h2>
+          <p class="section-subtitle">Things I've grown with love and code</p>
+          <div class="title-decoration"></div>
+        </div>
+        <div class="projects-grid">
+
+          <div class="project-card reveal-stagger">
+            <div class="project-image-wrap">
+              <img src="images/piano.png" alt="Piano Flash Card App" loading="lazy" />
+              <div class="project-overlay">
+                <a href="https://yllen-piano-flash-card.netlify.app/" target="_blank" rel="noopener" class="project-link">View Live 🌸</a>
+                <a href="https://github.com/yllenfer/flash-card-app" target="_blank" rel="noopener" class="project-link">GitHub 🐙</a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Piano Flash Card App</h3>
+              <p>Learn piano notes with interactive flash cards</p>
+              <div class="project-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">CSS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal-stagger">
+            <div class="project-image-wrap">
+              <img src="images/elderbot.png" alt="Elder Bot" loading="lazy" />
+              <div class="project-overlay">
+                <a href="https://elderbot.netlify.app/" target="_blank" rel="noopener" class="project-link">View Live 🌸</a>
+                <a href="https://github.com/yllenfer/elderbot" target="_blank" rel="noopener" class="project-link">GitHub 🐙</a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Elder Bot</h3>
+              <p>A helpful chatbot designed for elderly users</p>
+              <div class="project-tags">
+                <span class="tag">Node.js</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal-stagger">
+            <div class="project-image-wrap">
+              <img src="images/recipe-app.png" alt="Recipe App" loading="lazy" />
+              <div class="project-overlay">
+                <a href="https://yllensrecipeapp.netlify.app/" target="_blank" rel="noopener" class="project-link">View Live 🌸</a>
+                <a href="https://github.com/yllenfer/recipeapp" target="_blank" rel="noopener" class="project-link">GitHub 🐙</a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Recipe App</h3>
+              <p>Discover and save your favorite recipes</p>
+              <div class="project-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">API</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal-stagger">
+            <div class="project-image-wrap">
+              <img src="images/tents-app.png" alt="Tent App" loading="lazy" />
+              <div class="project-overlay">
+                <a href="https://preeminent-bonbon-fc0ad6.netlify.app/" target="_blank" rel="noopener" class="project-link">View Live 🌸</a>
+                <a href="https://github.com/yllenfer/week02" target="_blank" rel="noopener" class="project-link">GitHub 🐙</a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Tent App</h3>
+              <p>Find the perfect tent for your adventures</p>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal-stagger">
+            <div class="project-image-wrap">
+              <img src="images/dad-jokes.png" alt="Dad Jokes" loading="lazy" />
+              <div class="project-overlay">
+                <a href="https://yllenfer.github.io/WesbosClass/dadjokes/jokes.html" target="_blank" rel="noopener" class="project-link">View Live 🌸</a>
+                <a href="https://github.com/yllenfer/WesbosClass" target="_blank" rel="noopener" class="project-link">GitHub 🐙</a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Dad Jokes</h3>
+              <p>Because everyone deserves a good groan</p>
+              <div class="project-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">API</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal-stagger">
+            <div class="project-image-wrap">
+              <img src="images/checkbox.png" alt="Multiple Checkboxes" loading="lazy" />
+              <div class="project-overlay">
+                <a href="https://yllenfer.github.io/WesbosClass/multiple-checkboxes/index.html" target="_blank" rel="noopener" class="project-link">View Live 🌸</a>
+                <a href="https://github.com/yllenfer/WesbosClass/tree/master/multiple-checkboxes" target="_blank" rel="noopener" class="project-link">GitHub 🐙</a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Multiple Checkboxes</h3>
+              <p>Shift-click to select ranges — a neat DOM trick</p>
+              <div class="project-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">DOM</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ CONTACT ═══════════════════ -->
+    <section id="contact" class="contact-section">
+      <div class="section-container reveal">
+        <div class="section-header">
+          <h2 class="section-title">Let's Chat! 💌</h2>
+          <p class="section-subtitle">Send me a message — I'd love to hear from you</p>
+          <div class="title-decoration"></div>
+        </div>
+        <div class="contact-content">
+          <div class="contact-card">
+            <div id="form-success" class="form-success hidden">
+              <span class="success-icon">🌸</span>
+              <p>Message sent! I'll get back to you soon.</p>
+            </div>
+            <div id="form-error" class="form-error hidden">
+              <p>Please fill in all fields with a valid email.</p>
+            </div>
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="fname">Your Name 🌿</label>
+                <input type="text" id="fname" name="firstname" placeholder="What's your name?" autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email 🌸</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label for="subject">Message 🌺</label>
+                <textarea id="subject" name="subject" placeholder="What's on your mind?" rows="5"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-submit">Send Message 🌷</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ FOOTER ═══════════════════ -->
+    <footer class="main-footer">
+      <p class="footer-text">Made with 💕 &amp; ☕ by Yllen Fernandez</p>
+      <p class="footer-sub">LIMS Engineer · Creative Developer · Garden Enthusiast</p>
+      <div class="footer-links">
+        <a href="https://github.com/yllenfer" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/yllen-fernandez-624827185/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://dev.to/opensourceyllen" target="_blank" rel="noopener">Dev.to</a>
+      </div>
+      <p class="footer-copy">© 2024 Yllen Fernandez 🌸</p>
+    </footer>
+
+  </div><!-- end .page-wrapper -->
+</body>
 </html>

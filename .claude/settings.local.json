@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(host-spawn node *)",
+      "Bash(host-spawn npm *)",
+      "Bash(host-spawn which *)",
+      "Read(//home/**)",
+      "Read(//opt/**)",
+      "Read(//snap/bin/**)",
+      "Bash(flatpak list *)",
+      "Bash(env)",
+      "Bash(host-spawn ls *)",
+      "Bash(host-spawn bash *)"
+    ]
+  }
+}
