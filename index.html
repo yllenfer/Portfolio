@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MV::terminal — Mariam Velásquez</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- BOOT SEQUENCE OVERLAY -->
+  <div id="boot-overlay" class="boot-overlay">
+    <div id="boot-text" class="boot-text"></div>
+  </div>
+
+  <!-- CRT EFFECTS -->
+  <div class="crt-scanlines"></div>
+  <div class="crt-flicker"></div>
+
+  <!-- TERMINAL STATUS BAR -->
+  <div class="term-status" id="term-status">
+    <span class="ts-left">
+      <span class="ts-blink">█</span> MV::TERMINAL v2.0
+    </span>
+    <span class="ts-right">
+      <span id="ts-time">00:00:00</span> | <span id="ts-uptime">0m</span>
+    </span>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <div class="nav-prompt">
+      <span class="prompt-user">visitor</span>@<span class="prompt-host">mv-portfolio</span>:<span class="prompt-path">~</span>$ <span class="prompt-cursor">▌</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about" data-cmd="cat about.md">ABOUT</a></li>
+      <li><a href="#work" data-cmd="ls --projects">WORK</a></li>
+      <li><a href="#skills" data-cmd="tree skills/">SKILLS</a></li>
+      <li><a href="#contact" data-cmd="mail contact@mv">CONTACT</a></li>
+    </ul>
+    <div class="nav-badge">
+      <span class="badge-inner">⚔</span>
+    </div>
+  </nav>
+
+  <!-- HERO / TERMINAL WELCOME -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <pre class="hero-ascii" id="hero-ascii">
+.------------------------------------------.
+|  ███╗   ███╗██╗   ██╗                    |
+|  ████╗ ████║██║   ██║                    |
+|  ██╔████╔██║██║   ██║                    |
+|  ██║╚██╔╝██║╚██╗ ██╔╝                    |
+|  ██║ ╚═╝ ██║ ╚████╔╝                     |
+|  ╚═╝     ╚═╝  ╚═══╝                      |
+|   PORTFOLIO :: TERMINAL EDITION           |
+'------------------------------------------'
+      </pre>
+    </div>
+    <div class="hero-content">
+      <div class="hero-typewriter" id="hero-typewriter">
+        <span class="hero-line" id="hero-line-1"></span><br />
+        <span class="hero-line" id="hero-line-2"></span><br />
+        <span class="hero-line" id="hero-line-3"></span><br />
+        <span class="hero-cursor">▌</span>
+      </div>
+      <div class="hero-stats" id="hero-stats">
+        <div class="stat-item">
+          <span class="stat-value">47</span>
+          <span class="stat-label">PROJECTS_DEPLOYED</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">12</span>
+          <span class="stat-label">NFTs_MINTED</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">6</span>
+          <span class="stat-label">YEARS_ACTIVE</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span class="scroll-arrow">▼</span>
+      <span class="scroll-text">SCROLL TO CONTINUE</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="section-shield">
+      <span class="shield-icon">⬡</span>
+      <span class="shield-text">UNIT_PROFILE</span>
+    </div>
+    <div class="about-grid">
+      <div class="about-portrait">
+        <div class="portrait-frame">
+          <div class="portrait-pixels" id="portrait-pixels"></div>
+          <div class="portrait-label">MARIAM_VELASQUEZ.IMG</div>
+        </div>
+        <div class="portrait-tag">LOCATION: MADRID, ES</div>
+      </div>
+      <div class="about-info">
+        <div class="term-line"><span class="prompt-user">visitor</span>@<span class="prompt-host">mv-portfolio</span>:<span class="prompt-path">~/about</span>$ <span class="cmd-text">cat profile.md</span></div>
+        <div class="term-output">
+          <p class="about-text"><span class="txt-gold">Mariam Velásquez</span> — Digital Artist &amp; Creative Developer</p>
+          <p class="about-text">Multidisciplinary artist working at the intersection of fine art, code, and blockchain. Every pixel intentional. Every interaction meaningful.</p>
+          <p class="about-text">6 years crafting immersive digital experiences. Collaborations across Europe &amp; Latin America with studios, galleries, and DAOs.</p>
+        </div>
+        <div class="about-cta">
+          <span class="prompt-user">visitor</span>@<span class="prompt-host">mv-portfolio</span>:<span class="prompt-path">~/about</span>$ <span class="cmd-inline">cat contact.md</span>
+          <div class="about-links">
+            <a href="#" class="term-link">⟶  email</a>
+            <a href="#" class="term-link">⟶  twitter</a>
+            <a href="#" class="term-link">⟶  instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK / PROJECTS -->
+  <section class="work" id="work">
+    <div class="section-shield">
+      <span class="shield-icon">⚔</span>
+      <span class="shield-text">ARCHIVE_&lt;PROJECTS&gt;</span>
+    </div>
+    <div class="term-line"><span class="prompt-user">visitor</span>@<span class="prompt-host">mv-portfolio</span>:<span class="prompt-path">~/work</span>$ <span class="cmd-text">ls --projects -la</span></div>
+    <div class="projects-grid">
+      <div class="project-card" data-num="01">
+        <div class="project-header">
+          <span class="project-num">[01]</span>
+          <span class="project-type">WEB_EXPERIENCE</span>
+        </div>
+        <div class="project-visual pv-1">
+          <div class="pv-inner"></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">ECHOES_OF_THE_VOID</h3>
+          <p class="project-desc">Immersive WebGL experience. Generative landscapes &amp; particle systems responding to user emotion.</p>
+          <div class="project-footer">
+            <span class="project-tech">#WebGL #ThreeJS</span>
+            <a href="#" class="project-link">VIEW_CASE →</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-num="02">
+        <div class="project-header">
+          <span class="project-num">[02]</span>
+          <span class="project-type">BRAND_IDENTITY</span>
+        </div>
+        <div class="project-visual pv-2">
+          <div class="pv-inner"></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">MARBELLA_DAO</h3>
+          <p class="project-desc">Full visual identity and website for a Mediterranean-inspired Web3 collective.</p>
+          <div class="project-footer">
+            <span class="project-tech">#Branding #Web3</span>
+            <a href="#" class="project-link">VIEW →</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-num="03">
+        <div class="project-header">
+          <span class="project-num">[03]</span>
+          <span class="project-type">MOTION_FILM</span>
+        </div>
+        <div class="project-visual pv-3">
+          <div class="pv-inner"></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">MEMORIA_SERIES</h3>
+          <p class="project-desc">Animated short films reflecting on memory, loss, and digital identity.</p>
+          <div class="project-footer">
+            <span class="project-tech">#Animation #Film</span>
+            <a href="#" class="project-link">VIEW →</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-num="04">
+        <div class="project-header">
+          <span class="project-num">[04]</span>
+          <span class="project-type">INTERACTIVE_INSTALL</span>
+        </div>
+        <div class="project-visual pv-4">
+          <div class="pv-inner"></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">SIGNAL_NOISE</h3>
+          <p class="project-desc">Gallery installation using real-time biometric data to generate evolving visual compositions.</p>
+          <div class="project-footer">
+            <span class="project-tech">#Installation #BioArt</span>
+            <a href="#" class="project-link">VIEW_CASE →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="work-footer">
+      <span class="prompt-user">visitor</span>@<span class="prompt-host">mv-portfolio</span>:<span class="prompt-path">~/work</span>$ <span class="txt-dim">_ 4 items found</span>
+    </div>
+  </section>
+
+  <!-- SKILLS / TECH TREE -->
+  <section class="skills" id="skills">
+    <div class="section-shield">
+      <span class="shield-icon">⬛</span>
+      <span class="shield-text">TECH_TREE_&lt;SKILLS&gt;</span>
+    </div>
+    <div class="term-line"><span class="prompt-user">visitor</span>@<span class="prompt-host">mv-portfolio</span>:<span class="prompt-path">~/skills</span>$ <span class="cmd-text">tree --unlocked</span></div>
+    <div class="skills-tree">
+      <div class="skill-branch">
+        <div class="branch-label">▣ ARTISAN_TIER</div>
+        <div class="branch-items">
+          <span class="skill-node node-unlocked">Creative_Direction</span>
+          <span class="skill-node node-unlocked">Generative_Art</span>
+          <span class="skill-node node-unlocked">Motion_Design</span>
+        </div>
+      </div>
+      <div class="skill-branch">
+        <div class="branch-label">▣ ENGINEER_TIER</div>
+        <div class="branch-items">
+          <span class="skill-node node-unlocked">Solidity_Web3</span>
+          <span class="skill-node node-unlocked">React_ThreeJS</span>
+          <span class="skill-node node-unlocked">UX_UI_Design</span>
+        </div>
+      </div>
+      <div class="skill-branch">
+        <div class="branch-label">▣ RESEARCH_TIER</div>
+        <div class="branch-items">
+          <span class="skill-node node-locked">AI_Integration</span>
+          <span class="skill-node node-locked">Quantum_Art</span>
+          <span class="skill-node node-locked">Bio_Computing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NFT COLLECTION -->
+  <section class="nft" id="nft">
+    <div class="section-shield">
+      <span class="shield-icon">◈</span>
+      <span class="shield-text">VAULT_&lt;NFT_COLLECTION&gt;</span>
+    </div>
+    <div class="term-line"><span class="prompt-user">visitor</span>@<span class="prompt-host">mv-portfolio</span>:<span class="prompt-path">~/vault</span>$ <span class="cmd-text">ls --nfts --on-chain</span></div>
+    <div class="nft-grid">
+      <div class="nft-card nft-featured">
+        <div class="nft-visual">
+          <canvas id="nft-canvas-1" width="400" height="400"></canvas>
+          <div class="nft-scanline"></div>
+        </div>
+        <div class="nft-body">
+          <div class="nft-badge">★ FEATURED_DROP</div>
+          <h3 class="nft-title">LIMINAL_STATE_#001</h3>
+          <p class="nft-desc">Generative piece from 10,000 iterations of a self-modifying algorithm. Each viewing reveals hidden layers.</p>
+          <div class="nft-footer">
+            <div class="nft-price">
+              <span class="price-label">CURRENT_PRICE</span>
+              <span class="price-value">Ξ 2.4</span>
+            </div>
+            <a href="#" class="btn-term">COLLECT →</a>
+          </div>
+        </div>
+      </div>
+      <div class="nft-card">
+        <div class="nft-visual">
+          <canvas id="nft-canvas-2" width="300" height="300"></canvas>
+          <div class="nft-scanline"></div>
+        </div>
+        <div class="nft-body">
+          <h3 class="nft-title">SPECTRAL_FRAGMENT_#07</h3>
+          <div class="nft-footer">
+            <span class="price-value">Ξ 0.8</span>
+            <a href="#" class="btn-term-sm">VIEW</a>
+          </div>
+        </div>
+      </div>
+      <div class="nft-card">
+        <div class="nft-visual">
+          <canvas id="nft-canvas-3" width="300" height="300"></canvas>
+          <div class="nft-scanline"></div>
+        </div>
+        <div class="nft-body">
+          <h3 class="nft-title">ECHO_CHAMBER_#03</h3>
+          <div class="nft-footer">
+            <span class="price-value">Ξ 1.2</span>
+            <a href="#" class="btn-term-sm">VIEW</a>
+          </div>
+        </div>
+      </div>
+      <div class="nft-card">
+        <div class="nft-visual">
+          <canvas id="nft-canvas-4" width="300" height="300"></canvas>
+          <div class="nft-scanline"></div>
+        </div>
+        <div class="nft-body">
+          <h3 class="nft-title">VOID_PROTOCOL_#12</h3>
+          <div class="nft-footer">
+            <span class="price-value">Ξ 0.6</span>
+            <a href="#" class="btn-term-sm">VIEW</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="section-shield">
+      <span class="shield-icon">✉</span>
+      <span class="shield-text">OUTBOX_&lt;CONTACT&gt;</span>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-left">
+        <div class="term-line"><span class="prompt-user">visitor</span>@<span class="prompt-host">mv-portfolio</span>:<span class="prompt-path">~/contact</span>$ <span class="cmd-text">cat contact.md</span></div>
+        <div class="term-output">
+          <div class="contact-item">
+            <span class="contact-icon">✉</span>
+            <a href="mailto:hello@mariamvelasquez.com" class="contact-link">hello@mariamvelasquez.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">𝕏</span>
+            <a href="#" class="contact-link">@mariamvelasquez</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">◈</span>
+            <a href="#" class="contact-link">instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-right">
+        <div class="term-line"><span class="prompt-user">visitor</span>@<span class="prompt-host">mv-portfolio</span>:<span class="prompt-path">~/contact</span>$ <span class="cmd-text">./send_message.sh</span></div>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <span class="form-prompt">name:</span>
+            <input type="text" placeholder="your_name" required />
+          </div>
+          <div class="form-row">
+            <span class="form-prompt">email:</span>
+            <input type="email" placeholder="your@domain.com" required />
+          </div>
+          <div class="form-row">
+            <span class="form-prompt">msg:</span>
+            <textarea placeholder="type_message_here..." rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn-term">SEND_MESSAGE ▸</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <pre class="footer-ascii">
+╔══════════════════════════════════════╗
+║  MARIAM VELÁSQUEZ :: PORTFOLIO v2.0 ║
+║  © 2025 — ALL_RIGHTS_RESERVED       ║
+╚══════════════════════════════════════╝
+      </pre>
+      <div class="footer-links">
+        <a href="#">PRIVACY</a>
+        <a href="#">TERMS</a>
+        <a href="#" id="reboot-btn">REBOOT_SYSTEM</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
