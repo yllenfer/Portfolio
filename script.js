@@ -5,24 +5,24 @@
   const bootOverlay = document.getElementById('boot-overlay');
   const bootText = document.getElementById('boot-text');
   const bootLines = [
-    '[ BIOS ]  MV::TERMINAL v2.0 — System Power-On Self Test',
+    '[ BIOS ]  YF::TERMINAL v1.0 — System Power-On Self Test',
     '[ BIOS ]  Initializing CRT controller... OK',
     '[ BIOS ]  Memory check: 640K conventional, 1024K extended',
     '',
     '[ KERNEL] Loading terminal subsystem...',
-    '[ KERNEL] Mounting /home/visitor/mv-portfolio... OK',
+    '[ KERNEL] Mounting /home/visitor/yf-portfolio... OK',
     '[ KERNEL] Initializing display buffer (80x24) @ 0xB8000',
     '',
     '[ NET   ] MAC: 00:1A:2B:3C:4D:5E — DHCP lease acquired',
-    '[ NET   ] Connection: CREATIVE_CLOUD — signal strength: 97%',
+    '[ NET   ] Connection: HOME_LAB_MESH — signal strength: 97%',
     '',
-    '[ DAEMON] Starting web3 provider... OK',
-    '[ DAEMON] Scanning for NFT contracts... 4 collections found',
+    '[ DAEMON] Starting agent orchestration service... OK',
+    '[ DAEMON] Scanning home lab nodes... 4 services found',
     '',
     '[ INIT  ] Portfolios initialized. Ready.',
     '[ INIT  ] Type HELP for available commands.',
     '',
-    '━━━ Welcome to MV::TERMINAL ━━━',
+    '━━━ Welcome to YF::TERMINAL ━━━',
     '',
     '> system ready. press any key to continue...'
   ];
@@ -70,9 +70,9 @@
     typewriterStarted = true;
 
     const lines = [
-      { id: 'hero-line-1', text: '> ./init_portfolio.sh --user=Mariam_Velásquez', delay: 0 },
-      { id: 'hero-line-2', text: '> ROLE: Digital_Artist || Creative_Developer', delay: 800 },
-      { id: 'hero-line-3', text: '> STATUS: ONLINE || ACCEPTING_PROJECTS: TRUE', delay: 1600 }
+      { id: 'hero-line-1', text: '> ./init_profile.sh --user=Yllen_Fernandez', delay: 0 },
+      { id: 'hero-line-2', text: '> ROLE: LIMS_Engineer || Open_Source_Knight', delay: 800 },
+      { id: 'hero-line-3', text: '> STATUS: ONLINE || HOMELAB: OPERATIONAL', delay: 1600 }
     ];
 
     let currentLine = 0;
@@ -437,7 +437,7 @@
   };
 
   console.log(
-    '%c MV::TERMINAL v2.0 ',
+    '%c YF::TERMINAL v1.0 ',
     'background: #33ff33; color: #000; font-family: monospace; font-size: 12px; padding: 4px;'
   );
   console.log('%c Type REBOOT to restart the system.', 'color: #33ff33; font-family: monospace;');

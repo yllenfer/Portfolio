@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MV::terminal — Mariam Velásquez</title>
+  <title>YF::terminal — Yllen Fernandez</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -20,7 +20,7 @@
   <!-- TERMINAL STATUS BAR -->
   <div class="term-status" id="term-status">
     <span class="ts-left">
-      <span class="ts-blink">█</span> MV::TERMINAL v2.0
+      <span class="ts-blink">█</span> YF::TERMINAL v1.0
     </span>
     <span class="ts-right">
       <span id="ts-time">00:00:00</span> | <span id="ts-uptime">0m</span>
@@ -30,13 +30,13 @@
   <!-- NAVIGATION -->
   <nav class="nav" id="nav">
     <div class="nav-prompt">
-      <span class="prompt-user">visitor</span>@<span class="prompt-host">mv-portfolio</span>:<span class="prompt-path">~</span>$ <span class="prompt-cursor">▌</span>
+      <span class="prompt-user">visitor</span>@<span class="prompt-host">yf-portfolio</span>:<span class="prompt-path">~</span>$ <span class="prompt-cursor">▌</span>
     </div>
     <ul class="nav-links">
       <li><a href="#about" data-cmd="cat about.md">ABOUT</a></li>
       <li><a href="#work" data-cmd="ls --projects">WORK</a></li>
       <li><a href="#skills" data-cmd="tree skills/">SKILLS</a></li>
-      <li><a href="#contact" data-cmd="mail contact@mv">CONTACT</a></li>
+      <li><a href="#contact" data-cmd="mail contact@yf">CONTACT</a></li>
     </ul>
     <div class="nav-badge">
       <span class="badge-inner">⚔</span>
@@ -48,12 +48,12 @@
     <div class="hero-bg">
       <pre class="hero-ascii" id="hero-ascii">
 .------------------------------------------.
-|  ███╗   ███╗██╗   ██╗                    |
-|  ████╗ ████║██║   ██║                    |
-|  ██╔████╔██║██║   ██║                    |
-|  ██║╚██╔╝██║╚██╗ ██╔╝                    |
-|  ██║ ╚═╝ ██║ ╚████╔╝                     |
-|  ╚═╝     ╚═╝  ╚═══╝                      |
+|  ██╗   ██╗███████╗                       |
+|  ╚██╗ ██╔╝██╔════╝                       |
+|   ╚████╔╝ █████╗                         |
+|    ╚██╔╝  ██╔══╝                         |
+|     ██║   ██║                            |
+|     ╚═╝   ╚═╝                            |
 |   PORTFOLIO :: TERMINAL EDITION           |
 '------------------------------------------'
       </pre>
@@ -67,12 +67,12 @@
       </div>
       <div class="hero-stats" id="hero-stats">
         <div class="stat-item">
-          <span class="stat-value">47</span>
-          <span class="stat-label">PROJECTS_DEPLOYED</span>
+          <span class="stat-value">29</span>
+          <span class="stat-label">PUBLIC_REPOS</span>
         </div>
         <div class="stat-item">
-          <span class="stat-value">12</span>
-          <span class="stat-label">NFTs_MINTED</span>
+          <span class="stat-value">8</span>
+          <span class="stat-label">FOLLOWERS</span>
         </div>
         <div class="stat-item">
           <span class="stat-value">6</span>
@@ -96,23 +96,24 @@
       <div class="about-portrait">
         <div class="portrait-frame">
           <div class="portrait-pixels" id="portrait-pixels"></div>
-          <div class="portrait-label">MARIAM_VELASQUEZ.IMG</div>
+          <div class="portrait-label">YLLEN_FERNANDEZ.IMG</div>
         </div>
-        <div class="portrait-tag">LOCATION: MADRID, ES</div>
+        <div class="portrait-tag">LOCATION: MADRID, SPAIN</div>
       </div>
       <div class="about-info">
-        <div class="term-line"><span class="prompt-user">visitor</span>@<span class="prompt-host">mv-portfolio</span>:<span class="prompt-path">~/about</span>$ <span class="cmd-text">cat profile.md</span></div>
+        <div class="term-line"><span class="prompt-user">visitor</span>@<span class="prompt-host">yf-portfolio</span>:<span class="prompt-path">~/about</span>$ <span class="cmd-text">cat profile.md</span></div>
         <div class="term-output">
-          <p class="about-text"><span class="txt-gold">Mariam Velásquez</span> — Digital Artist &amp; Creative Developer</p>
-          <p class="about-text">Multidisciplinary artist working at the intersection of fine art, code, and blockchain. Every pixel intentional. Every interaction meaningful.</p>
-          <p class="about-text">6 years crafting immersive digital experiences. Collaborations across Europe &amp; Latin America with studios, galleries, and DAOs.</p>
+          <p class="about-text"><span class="txt-gold">Yllen Fernandez</span> — LIMS Engineer &amp; Open Source Knight</p>
+          <p class="about-text">Software engineer building self-hosted infrastructure and open-source tools. Home lab commander running Ubuntu, Docker, and Tailscale across a fleet of ThinkPads and Mac servers.</p>
+          <p class="about-text">Currently working at QBench as a LIMS Engineer. Researching mechatronics, brain-computer interfaces, and AI agent orchestration on the side.</p>
         </div>
         <div class="about-cta">
-          <span class="prompt-user">visitor</span>@<span class="prompt-host">mv-portfolio</span>:<span class="prompt-path">~/about</span>$ <span class="cmd-inline">cat contact.md</span>
+          <span class="prompt-user">visitor</span>@<span class="prompt-host">yf-portfolio</span>:<span class="prompt-path">~/about</span>$ <span class="cmd-inline">cat socials.md</span>
           <div class="about-links">
-            <a href="#" class="term-link">⟶  email</a>
-            <a href="#" class="term-link">⟶  twitter</a>
-            <a href="#" class="term-link">⟶  instagram</a>
+            <a href="https://github.com/yllenfer" target="_blank" class="term-link">⟶  github</a>
+            <a href="https://www.linkedin.com/in/yllenfernandez" target="_blank" class="term-link">⟶  linkedin</a>
+            <a href="https://twitter.com/opensourceyllen" target="_blank" class="term-link">⟶  twitter</a>
+            <a href="https://dev.to/opensourceyllen" target="_blank" class="term-link">⟶  dev.to</a>
           </div>
         </div>
       </div>
@@ -125,55 +126,55 @@
       <span class="shield-icon">⚔</span>
       <span class="shield-text">ARCHIVE_&lt;PROJECTS&gt;</span>
     </div>
-    <div class="term-line"><span class="prompt-user">visitor</span>@<span class="prompt-host">mv-portfolio</span>:<span class="prompt-path">~/work</span>$ <span class="cmd-text">ls --projects -la</span></div>
+    <div class="term-line"><span class="prompt-user">visitor</span>@<span class="prompt-host">yf-portfolio</span>:<span class="prompt-path">~/work</span>$ <span class="cmd-text">ls --projects -la</span></div>
     <div class="projects-grid">
       <div class="project-card" data-num="01">
         <div class="project-header">
           <span class="project-num">[01]</span>
-          <span class="project-type">WEB_EXPERIENCE</span>
+          <span class="project-type">AI_AGENT</span>
         </div>
         <div class="project-visual pv-1">
           <div class="pv-inner"></div>
         </div>
         <div class="project-body">
-          <h3 class="project-title">ECHOES_OF_THE_VOID</h3>
-          <p class="project-desc">Immersive WebGL experience. Generative landscapes &amp; particle systems responding to user emotion.</p>
+          <h3 class="project-title">RECRUITER_TELEGRAM_BOT</h3>
+          <p class="project-desc">Agentic bot for managing candidate submissions. State machine flow with Gmail integration and ATS stubs. Built on Python.</p>
           <div class="project-footer">
-            <span class="project-tech">#WebGL #ThreeJS</span>
-            <a href="#" class="project-link">VIEW_CASE →</a>
+            <span class="project-tech">#Python #Telegram #AI</span>
+            <a href="https://github.com/yllenfer" target="_blank" class="project-link">VIEW →</a>
           </div>
         </div>
       </div>
       <div class="project-card" data-num="02">
         <div class="project-header">
           <span class="project-num">[02]</span>
-          <span class="project-type">BRAND_IDENTITY</span>
+          <span class="project-type">HOME_LAB</span>
         </div>
         <div class="project-visual pv-2">
           <div class="pv-inner"></div>
         </div>
         <div class="project-body">
-          <h3 class="project-title">MARBELLA_DAO</h3>
-          <p class="project-desc">Full visual identity and website for a Mediterranean-inspired Web3 collective.</p>
+          <h3 class="project-title">OPENCLAW_AGENT_PLATFORM</h3>
+          <p class="project-desc">Self-hosted AI agent orchestration system for multi-agent Telegram workflows. Runs entirely on the home lab.</p>
           <div class="project-footer">
-            <span class="project-tech">#Branding #Web3</span>
-            <a href="#" class="project-link">VIEW →</a>
+            <span class="project-tech">#Docker #Agents #SelfHosted</span>
+            <a href="https://github.com/yllenfer" target="_blank" class="project-link">VIEW →</a>
           </div>
         </div>
       </div>
       <div class="project-card" data-num="03">
         <div class="project-header">
           <span class="project-num">[03]</span>
-          <span class="project-type">MOTION_FILM</span>
+          <span class="project-type">INFRASTRUCTURE</span>
         </div>
         <div class="project-visual pv-3">
           <div class="pv-inner"></div>
         </div>
         <div class="project-body">
-          <h3 class="project-title">MEMORIA_SERIES</h3>
-          <p class="project-desc">Animated short films reflecting on memory, loss, and digital identity.</p>
+          <h3 class="project-title">HOME_LAB_FORTRESS</h3>
+          <p class="project-desc">Self-hosted services including Jellyfin media server, Home Assistant smart home hub, Linkstack link-in-bio, and Tailscale mesh VPN.</p>
           <div class="project-footer">
-            <span class="project-tech">#Animation #Film</span>
+            <span class="project-tech">#Docker #Linux #Homelab</span>
             <a href="#" class="project-link">VIEW →</a>
           </div>
         </div>
@@ -181,23 +182,23 @@
       <div class="project-card" data-num="04">
         <div class="project-header">
           <span class="project-num">[04]</span>
-          <span class="project-type">INTERACTIVE_INSTALL</span>
+          <span class="project-type">FULL_STACK</span>
         </div>
         <div class="project-visual pv-4">
           <div class="pv-inner"></div>
         </div>
         <div class="project-body">
-          <h3 class="project-title">SIGNAL_NOISE</h3>
-          <p class="project-desc">Gallery installation using real-time biometric data to generate evolving visual compositions.</p>
+          <h3 class="project-title">RECIPE_APP</h3>
+          <p class="project-desc">Full-stack recipe management application. Browse, search, and save your favorite recipes with a clean modern interface.</p>
           <div class="project-footer">
-            <span class="project-tech">#Installation #BioArt</span>
-            <a href="#" class="project-link">VIEW_CASE →</a>
+            <span class="project-tech">#CSS #JavaScript</span>
+            <a href="https://github.com/yllenfer/recipeapp" target="_blank" class="project-link">VIEW →</a>
           </div>
         </div>
       </div>
     </div>
     <div class="work-footer">
-      <span class="prompt-user">visitor</span>@<span class="prompt-host">mv-portfolio</span>:<span class="prompt-path">~/work</span>$ <span class="txt-dim">_ 4 items found</span>
+      <span class="prompt-user">visitor</span>@<span class="prompt-host">yf-portfolio</span>:<span class="prompt-path">~/work</span>$ <span class="txt-dim">_ 4 items found</span>
     </div>
   </section>
 
@@ -207,98 +208,79 @@
       <span class="shield-icon">⬛</span>
       <span class="shield-text">TECH_TREE_&lt;SKILLS&gt;</span>
     </div>
-    <div class="term-line"><span class="prompt-user">visitor</span>@<span class="prompt-host">mv-portfolio</span>:<span class="prompt-path">~/skills</span>$ <span class="cmd-text">tree --unlocked</span></div>
+    <div class="term-line"><span class="prompt-user">visitor</span>@<span class="prompt-host">yf-portfolio</span>:<span class="prompt-path">~/skills</span>$ <span class="cmd-text">tree --unlocked</span></div>
     <div class="skills-tree">
       <div class="skill-branch">
         <div class="branch-label">▣ ARTISAN_TIER</div>
         <div class="branch-items">
-          <span class="skill-node node-unlocked">Creative_Direction</span>
-          <span class="skill-node node-unlocked">Generative_Art</span>
-          <span class="skill-node node-unlocked">Motion_Design</span>
+          <span class="skill-node node-unlocked">Python</span>
+          <span class="skill-node node-unlocked">Linux</span>
+          <span class="skill-node node-unlocked">Docker</span>
+          <span class="skill-node node-unlocked">JavaScript</span>
         </div>
       </div>
       <div class="skill-branch">
         <div class="branch-label">▣ ENGINEER_TIER</div>
         <div class="branch-items">
-          <span class="skill-node node-unlocked">Solidity_Web3</span>
-          <span class="skill-node node-unlocked">React_ThreeJS</span>
-          <span class="skill-node node-unlocked">UX_UI_Design</span>
+          <span class="skill-node node-unlocked">HomeLab_Infra</span>
+          <span class="skill-node node-unlocked">Hardware_RPi</span>
+          <span class="skill-node node-unlocked">Tailscale_VPN</span>
+          <span class="skill-node node-unlocked">CI_CD_Pipelines</span>
         </div>
       </div>
       <div class="skill-branch">
         <div class="branch-label">▣ RESEARCH_TIER</div>
         <div class="branch-items">
-          <span class="skill-node node-locked">AI_Integration</span>
-          <span class="skill-node node-locked">Quantum_Art</span>
-          <span class="skill-node node-locked">Bio_Computing</span>
+          <span class="skill-node node-unlocked">Mechatronics</span>
+          <span class="skill-node node-unlocked">AI_Orchestration</span>
+          <span class="skill-node node-locked">Brain_Computer_IF</span>
+          <span class="skill-node node-locked">Quantum_Computing</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- NFT COLLECTION -->
-  <section class="nft" id="nft">
+  <!-- BLOG / WRITING -->
+  <section class="blog" id="blog">
     <div class="section-shield">
-      <span class="shield-icon">◈</span>
-      <span class="shield-text">VAULT_&lt;NFT_COLLECTION&gt;</span>
+      <span class="shield-icon">📜</span>
+      <span class="shield-text">SCROLL_&lt;BLOG_POSTS&gt;</span>
     </div>
-    <div class="term-line"><span class="prompt-user">visitor</span>@<span class="prompt-host">mv-portfolio</span>:<span class="prompt-path">~/vault</span>$ <span class="cmd-text">ls --nfts --on-chain</span></div>
-    <div class="nft-grid">
-      <div class="nft-card nft-featured">
-        <div class="nft-visual">
-          <canvas id="nft-canvas-1" width="400" height="400"></canvas>
-          <div class="nft-scanline"></div>
-        </div>
-        <div class="nft-body">
-          <div class="nft-badge">★ FEATURED_DROP</div>
-          <h3 class="nft-title">LIMINAL_STATE_#001</h3>
-          <p class="nft-desc">Generative piece from 10,000 iterations of a self-modifying algorithm. Each viewing reveals hidden layers.</p>
-          <div class="nft-footer">
-            <div class="nft-price">
-              <span class="price-label">CURRENT_PRICE</span>
-              <span class="price-value">Ξ 2.4</span>
-            </div>
-            <a href="#" class="btn-term">COLLECT →</a>
-          </div>
+    <div class="term-line"><span class="prompt-user">visitor</span>@<span class="prompt-host">yf-portfolio</span>:<span class="prompt-path">~/blog</span>$ <span class="cmd-text">cat --recent-posts</span></div>
+    <div class="blog-list">
+      <div class="blog-item">
+        <span class="blog-icon">📜</span>
+        <div class="blog-body">
+          <a href="https://dev.to/opensourceyllen/networking-outside-the-box-my-job-search-journey-sans-linkedin-2agm" target="_blank" class="blog-title">Networking Outside the Box: My Job Search Journey sans LinkedIn</a>
+          <span class="blog-meta">dev.to  —  #career #networking</span>
         </div>
       </div>
-      <div class="nft-card">
-        <div class="nft-visual">
-          <canvas id="nft-canvas-2" width="300" height="300"></canvas>
-          <div class="nft-scanline"></div>
-        </div>
-        <div class="nft-body">
-          <h3 class="nft-title">SPECTRAL_FRAGMENT_#07</h3>
-          <div class="nft-footer">
-            <span class="price-value">Ξ 0.8</span>
-            <a href="#" class="btn-term-sm">VIEW</a>
-          </div>
+      <div class="blog-item">
+        <span class="blog-icon">📜</span>
+        <div class="blog-body">
+          <a href="https://dev.to/opensourceyllen/remote-startup-chaos-do-this-and-thrive-23j3" target="_blank" class="blog-title">Remote Startup Chaos: Do This and Thrive</a>
+          <span class="blog-meta">dev.to  —  #remotework #startup</span>
         </div>
       </div>
-      <div class="nft-card">
-        <div class="nft-visual">
-          <canvas id="nft-canvas-3" width="300" height="300"></canvas>
-          <div class="nft-scanline"></div>
-        </div>
-        <div class="nft-body">
-          <h3 class="nft-title">ECHO_CHAMBER_#03</h3>
-          <div class="nft-footer">
-            <span class="price-value">Ξ 1.2</span>
-            <a href="#" class="btn-term-sm">VIEW</a>
-          </div>
+      <div class="blog-item">
+        <span class="blog-icon">📜</span>
+        <div class="blog-body">
+          <a href="https://dev.to/opensourceyllen/university-over-bootcamp-why-i-chose-traditional-education-for-my-tech-journey-58cb" target="_blank" class="blog-title">University over Bootcamp: Why I Chose Traditional Education</a>
+          <span class="blog-meta">dev.to  —  #university #career</span>
         </div>
       </div>
-      <div class="nft-card">
-        <div class="nft-visual">
-          <canvas id="nft-canvas-4" width="300" height="300"></canvas>
-          <div class="nft-scanline"></div>
+      <div class="blog-item">
+        <span class="blog-icon">📜</span>
+        <div class="blog-body">
+          <a href="https://dev.to/opensourceyllen/lessons-learned-too-late-reflecting-on-university-regrets-582n" target="_blank" class="blog-title">Lessons Learned Too Late: Reflecting on University Regrets</a>
+          <span class="blog-meta">dev.to  —  #reflection</span>
         </div>
-        <div class="nft-body">
-          <h3 class="nft-title">VOID_PROTOCOL_#12</h3>
-          <div class="nft-footer">
-            <span class="price-value">Ξ 0.6</span>
-            <a href="#" class="btn-term-sm">VIEW</a>
-          </div>
+      </div>
+      <div class="blog-item">
+        <span class="blog-icon">📜</span>
+        <div class="blog-body">
+          <a href="https://dev.to/opensourceyllen/android-studio-3h4j" target="_blank" class="blog-title">Android Studio — Guía de introducción</a>
+          <span class="blog-meta">dev.to  —  #android #espanol</span>
         </div>
       </div>
     </div>
@@ -312,24 +294,28 @@
     </div>
     <div class="contact-grid">
       <div class="contact-left">
-        <div class="term-line"><span class="prompt-user">visitor</span>@<span class="prompt-host">mv-portfolio</span>:<span class="prompt-path">~/contact</span>$ <span class="cmd-text">cat contact.md</span></div>
+        <div class="term-line"><span class="prompt-user">visitor</span>@<span class="prompt-host">yf-portfolio</span>:<span class="prompt-path">~/contact</span>$ <span class="cmd-text">cat contact.md</span></div>
         <div class="term-output">
           <div class="contact-item">
             <span class="contact-icon">✉</span>
-            <a href="mailto:hello@mariamvelasquez.com" class="contact-link">hello@mariamvelasquez.com</a>
+            <a href="mailto:yllenfernandez@gmail.com" class="contact-link">yllenfernandez@gmail.com</a>
           </div>
           <div class="contact-item">
             <span class="contact-icon">𝕏</span>
-            <a href="#" class="contact-link">@mariamvelasquez</a>
+            <a href="https://twitter.com/opensourceyllen" target="_blank" class="contact-link">@opensourceyllen</a>
           </div>
           <div class="contact-item">
             <span class="contact-icon">◈</span>
-            <a href="#" class="contact-link">instagram</a>
+            <a href="https://www.linkedin.com/in/yllenfernandez" target="_blank" class="contact-link">linkedin.com/in/yllenfernandez</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">⎇</span>
+            <a href="https://github.com/yllenfer" target="_blank" class="contact-link">github.com/yllenfer</a>
           </div>
         </div>
       </div>
       <div class="contact-right">
-        <div class="term-line"><span class="prompt-user">visitor</span>@<span class="prompt-host">mv-portfolio</span>:<span class="prompt-path">~/contact</span>$ <span class="cmd-text">./send_message.sh</span></div>
+        <div class="term-line"><span class="prompt-user">visitor</span>@<span class="prompt-host">yf-portfolio</span>:<span class="prompt-path">~/contact</span>$ <span class="cmd-text">./send_message.sh</span></div>
         <form class="contact-form" onsubmit="handleSubmit(event)">
           <div class="form-row">
             <span class="form-prompt">name:</span>
@@ -354,13 +340,13 @@
     <div class="footer-inner">
       <pre class="footer-ascii">
 ╔══════════════════════════════════════╗
-║  MARIAM VELÁSQUEZ :: PORTFOLIO v2.0 ║
+║  YLLEN FERNANDEZ :: PORTFOLIO v1.0  ║
 ║  © 2025 — ALL_RIGHTS_RESERVED       ║
 ╚══════════════════════════════════════╝
       </pre>
       <div class="footer-links">
-        <a href="#">PRIVACY</a>
-        <a href="#">TERMS</a>
+        <a href="https://github.com/yllenfer" target="_blank">GITHUB</a>
+        <a href="https://linktr.ee/yllenfernandez" target="_blank">LINKTREE</a>
         <a href="#" id="reboot-btn">REBOOT_SYSTEM</a>
       </div>
     </div>
