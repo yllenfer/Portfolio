@@ -1,9 +1,11 @@
+# Plain static site. The "build" just copies the files into dist/ so it works
+# regardless of the publish directory set in the Netlify dashboard.
 [build]
-  command = "npm run build"
+  command = "rm -rf dist && mkdir dist && cp -r index.html style.css thumbs dist/"
   publish = "dist"
 
 [[headers]]
   for = "/*"
-    [headers.values]
+  [headers.values]
     X-Frame-Options = "DENY"
     Cache-Control = "public, max-age=0, must-revalidate"

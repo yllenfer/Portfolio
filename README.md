@@ -1,20 +1,12 @@
-# YF::TERMINAL — Yllen Fernandez Portfolio
+# Yllen Fernandez — personal home page
 
-80s terminal + Age of Empires themed portfolio. Built with Vite, vanilla HTML/CSS/JS.
+A hand-written, early-2000s-style personal site listing my projects, with links to
+try them online, download them, or read their source.
 
-## Development
+Plain HTML + CSS, no build step. Open `index.html` in a browser to preview.
 
-```bash
-npm install
-npm run dev
-```
+- `index.html` – the page (projects are listed directly in the HTML)
+- `style.css` – styles
+- `thumbs/` – 320×220 project screenshots
 
-## Build
-
-```bash
-npm run build
-```
-
-## Deploy
-
-Auto-deploys via Netlify from the `main` branch.
+Deployed on Netlify from the `main` branch (publish directory: repo root).
