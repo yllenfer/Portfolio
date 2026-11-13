@@ -1,7 +1,8 @@
-# Plain static site: no build step, publish the repo root.
+# Plain static site. The "build" just copies the files into dist/ so it works
+# regardless of the publish directory set in the Netlify dashboard.
 [build]
-  command = "echo static site, no build step"
-  publish = "."
+  command = "rm -rf dist && mkdir dist && cp -r index.html style.css thumbs dist/"
+  publish = "dist"
 
 [[headers]]
   for = "/*"
