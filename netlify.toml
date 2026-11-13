@@ -1,6 +1,6 @@
 # Plain static site: no build step, publish the repo root.
 [build]
-  command = ""
+  command = "echo static site, no build step"
   publish = "."
 
 [[headers]]
